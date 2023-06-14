@@ -1,14 +1,26 @@
 #include <stdio.h>
-int main(void){
-int num1,num2,num3;
-	printf("Enter three number ");
-scanf("%d %d %d",&num1,&num2,&num3);  // Enter  numbers
-if(num1>num2 && num1>num3){
-  printf("Greatest number is num1: %d",num1);
-}else if(num2>num3 && num2>num1){
-  printf("Greatest number is num2: %d",num2);
-}else if (num3>num1 && num3>num2){
-printf("Greatest number is num3: %d",num3);
+
+int greatestno(int num1, int num2, int num3) {
+    int greatest = num1;
+
+    if (num2 > greatest) {
+        greatest = num2;
+    }
+
+    if (num3 > greatest) {
+        greatest = num3;
+    }
+
+    return greatest;
 }
-return 0;
+
+int main() {
+    int num1, num2, num3;
+    printf("Enter three number: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    
+    int result = greatestno(num1, num2, num3);
+    printf("The greatest number is: %d\n", result);
+
+    return 0;
 }
