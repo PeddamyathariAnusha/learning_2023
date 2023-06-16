@@ -1,29 +1,39 @@
 #include <stdio.h>
-
-int countSetBits(unsigned int n) {
+int countSetBits(unsigned int num) {
     int count = 0;
-    while (n != 0) {
-        count += n & 1;
-        n >>= 1;
+    
+    while (num > 0) {
+        count += num & 1;
+        num >>= 1;
     }
+    
     return count;
 }
-
-int totalSetBits(unsigned int arr[], int size) {
+int countTotalSetBits(unsigned int arr[], int size) {
     int totalBits = 0;
+    
     for (int i = 0; i < size; i++) {
         totalBits += countSetBits(arr[i]);
     }
+    
     return totalBits;
 }
 
 int main() {
-    unsigned int arr[3] = {0x1, 0xF4, 0x10001};
-    int size = sizeof(arr) / sizeof(arr[0]);
-
-    int totalBits = totalSetBits(arr, size);
-
-    printf("The total number of set bits in the given array is: %d\n", totalBits);
-
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+    
+    unsigned int arr[size];
+    
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < size; i++) {
+        scanf("%x", &arr[i]);
+    }
+    
+    int result = countTotalSetBits(arr, size);
+    
+    printf("Total number of set bits: %d\n", result);
+    
     return 0;
 }
