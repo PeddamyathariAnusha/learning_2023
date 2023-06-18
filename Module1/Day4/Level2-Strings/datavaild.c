@@ -6,7 +6,6 @@ bool isValidEmail(char email[]) {
     int length = strlen(email);
     int atIndex = -1;
     int dotIndex = -1;
-    // Check if the string contains '@' and '.'
     for (int i = 0; i < length; i++) {
         if (email[i] == '@') {
             atIndex = i;

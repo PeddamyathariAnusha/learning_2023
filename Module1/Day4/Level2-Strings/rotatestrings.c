@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 void rotateString(char str[], int k, char direction[]) {
     int len = strlen(str);
     if (strcmp(direction, "Left") == 0) {
