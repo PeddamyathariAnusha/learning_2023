@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Activities/Day1/learning_2023/Module1/day2/Level2",
-      "program": "d:/Activities/Day1/learning_2023/Module1/day2/Level2/build/Debug/outDebug",
+      "cwd": "d:/Activities/Day1/learning_2023/Module1/day1",
+      "program": "d:/Activities/Day1/learning_2023/Module1/day1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
