@@ -1,0 +1,4 @@
+welcome to visual studio code
+here we can you write and run the code
+the error are found in the terminal window, when you compile it
+if no errror , direct it will execute!!!
